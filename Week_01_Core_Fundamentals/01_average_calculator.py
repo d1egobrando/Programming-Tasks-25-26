@@ -1,23 +1,19 @@
-"""
-TASK: 01 Average Calculator
+def calculate_average():
+    num1 = int(input("Input a number:"))
+    num2 = int(input("Input a number:"))
+    num3 = int(input("Input a number:"))
+    num4 = int(input("Input a number:"))
+    num5 = int(input("Input a number:"))
 
-# Average Calculator
-Write a Python program that:
-- Prompts the user for a list of numbers.
-- Stores them in a 1D list.
-- Calculates the mean *without using built-in statistics libraries*.
-- Includes input validation.
-- Implements a reusable function: `calculate_average(values)`.
+    List = [num1,num2,num3,num4,num5]
+    print(List)
+    sum = num1 + num2 + num3 + num4 + num5
+    print(sum)
+    average = sum / len(List)
+    print(average)
+    if average > 30:
+        print("Valid Mean")
+    else:
+        print("Invalid Mean")
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
-
-def main():
-    pass
-
-
-
-if __name__ == "__main__":
-    main()
+calculate_average()
