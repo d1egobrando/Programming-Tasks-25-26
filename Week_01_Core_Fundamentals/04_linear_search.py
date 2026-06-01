@@ -1,24 +1,10 @@
-"""
-TASK: 04 Linear Search
+numbers = [1, 3, 5, 7, 9,11,13]
 
-# Linear Search
-Implement a linear search algorithm:
-- Ask the user for a target value.
-- Search a generated random list.
-- Return the index or -1.
-- Include `linear_search(values, target)`.
+target_number = int(input("Enter a number: "))
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
-
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
-
-
-if __name__ == "__main__":
-    main()
+for number in numbers:
+    if number == target_number:
+        print("Target Found:", target_number)
+        break
+else:
+    print("Target Not Found")
