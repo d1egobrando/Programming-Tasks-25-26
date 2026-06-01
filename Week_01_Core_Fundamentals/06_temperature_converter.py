@@ -1,23 +1,22 @@
-"""
-TASK: 06 Temperature Converter
+print("\nTemperature Converter")
+print("1. Celsius to Fahrenheit")
+print("2. Fahrenheit to Celsius")
+print("3. Exit")
 
-# Temperature Converter
-Build a converter tool:
-- Convert Celsius <-> Fahrenheit.
-- Provide a looped menu.
-- Validate user input.
+choice = input("Choose an option (1-3): ")
+if choice == "3":
+    print("Bye")
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
+if choice != "1" and choice != "2":
+    print("Choose a valid option")
+    choice = input("Choose an option (1-3): ")
 
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+if choice == "1":
+    celsius = float(input("Enter the temperature in Celsius: "))
+    fahrenheit = 9 * celsius / 5 + 32
+    print("The temperature in Fahrenheit is:", fahrenheit)
 
-
-if __name__ == "__main__":
-    main()
+if choice == "2":
+    fahrenheit = float(input("Enter the temperature in Fahrenheit: "))
+    celsius = 9 * fahrenheit / 5 - 32
+    print("The temperature in Celsius is:", fahrenheit)
