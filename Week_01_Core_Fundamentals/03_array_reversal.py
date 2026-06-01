@@ -1,23 +1,18 @@
-"""
-TASK: 03 Array Reversal
+import random
 
-# Array Reversal
-Create a program that:
-- Generates a list of random integers.
-- Reverses the list manually (no slicing or .reverse).
-- Includes a function `reverse_list(values)` that returns a new reversed list.
+List = []
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
+for i in range(5):
+    List.append(random.randint(1,100))
 
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+print(List)
 
+New_List = []
 
-if __name__ == "__main__":
-    main()
+index = len(List) - 1
+
+while index >= 0:
+    New_List.append(List[index])
+    index = index - 1
+
+print(New_List)
