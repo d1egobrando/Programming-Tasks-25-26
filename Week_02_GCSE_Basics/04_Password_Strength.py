@@ -1,25 +1,29 @@
-"""
-TASK: 04 Password Strength
+your_password = input("Enter a password: ")
 
-# Skills: Strings, loops, selection
-Ask the user to enter a password, and check that they meet these conditions:
-- At least 8 characters
-- Contains a number
-- Contains a captial and lower cased letter
-- Extend for one special character
-Print a response of weak, medium or strong for how many they pass.
+score = 0
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
+if len(your_password) >= 8:
+    score = score + 1
 
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+for character in your_password:
+    if character >= "0" and character <= "9":
+        score = score + 1
+        break
+
+for character in your_password:
+    if character >= "A" and character <= "Z":
+        score = score + 1
+        break
+
+for character in your_password:
+    if character >= "a" and character <= "z":
+        score = score + 1
+        break
 
 
-if __name__ == "__main__":
-    main()
+if score <= 2:
+    print("Weak")
+elif score <= 4:
+    print("Medium")
+else:
+    print("Strong")
