@@ -1,22 +1,19 @@
-"""
-TASK: 03 Queue Simulation
+queue = []
+name1 = input("Enter a name: ")
+name2 = input("Enter a name: ")
+name3 = input("Enter a name: ")
+name4 = input("Enter a name: ")
 
-# Queue Simulation using OOP
-Make a Queue class with:
-- enqueue, dequeue, peek, size  
-Simulate customers joining/leaving.
+queue.append(name1)
+queue.append(name2)
+queue.append(name3)
+queue.append(name4) #add to queue (Enqueue)
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
+print(queue[0]) #peek size
 
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+print(queue)
 
+print(("The length of the queue is: " ,len(queue))) #size of queue
 
-if __name__ == "__main__":
-    main()
+while len(queue) != 0:
+    print(queue.pop(0)) #dequeue
