@@ -1,23 +1,18 @@
-"""
-TASK: 06 Simple Login
+print("\nLOGIN ")
 
-# Skills: Selection, string comparison
-Start with a correct username/password (extend if saved in a text file separately):
-- Ask for login
-- Print "Welcome" or "Access Denied {number} attempts remaining"
-Only allow 3 attempts and close the file
+correct_username ="dan"
+correct_password ="123"
+password_re_try = 3
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
+while password_re_try > 0:
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
 
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+    if username == correct_username and password == correct_password:
+        print("Welcome " + correct_username)
+        break
 
-
-if __name__ == "__main__":
-    main()
+    else:
+        print("Invalid username or password")
+        password_re_try -= 1
+        print("Number of re-trys left:", password_re_try)
