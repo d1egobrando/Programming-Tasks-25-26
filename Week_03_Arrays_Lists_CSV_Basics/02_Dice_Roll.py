@@ -12,3 +12,6 @@ for i in range(rolling):
     num_available[dice] += 1
 
 print("Total Amount of sides", num_available)
+
+average = sum(every_roll) / len(every_roll)
+print("Average Amount of sides", average)
