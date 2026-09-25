@@ -1,11 +1,11 @@
+file = open("meantemp_daily_totals.txt", "r") #read
+
 temperatures = []
 
-highesttemp = max(temperatures)
-lowesttemp = min(temperatures)
-averagetemp = sum(temperatures) / len(temperatures)
+highest_temp = max(temperatures)
+lowest_temp = min(temperatures)
+average_temp = sum(temperatures) / len(temperatures)
 
-print("The Highest temperature is:", highesttemp)
-print("The Lowest temperature is:", lowesttemp)
-print("The Average temperature is:", averagetemp)
-
-file = open("meantemp_daily_totals.txt", "r") #read
+print("The Highest temperature is:", highest_temp)
+print("The Lowest temperature is:", lowest_temp)
+print("The Average temperature is:", average_temp)
