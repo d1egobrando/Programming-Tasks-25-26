@@ -1,23 +1,13 @@
-"""
-TASK: 01 Bubble Sort
+def bubble(list_a):
+    indexing_length = len(list_a) - 1
+    sorted = False
 
-# Bubble Sort
-Implement Bubble Sort on any size list:
-- Do not use built-in sort()
-- Count swaps
-- Extend by
+    while not sorted:
+        sorted = True
+        for i in range(0, indexing_length):
+            if list_a[i] > list_a[i + 1]:
+                sorted = False
+                list_a[i], list_a[i + 1] = list_a[i + 1], list_a[i]
+    return list_a
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
-
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
-
-
-if __name__ == "__main__":
-    main()
+print(bubble([1, 3, 2, 4, 5]))
