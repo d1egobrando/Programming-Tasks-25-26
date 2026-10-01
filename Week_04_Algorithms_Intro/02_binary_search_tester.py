@@ -1,23 +1,22 @@
-"""
-TASK: 02 Binary Search Tester
+def binary_search(sequence, item):
+    begin_index  = 0
+    end_index = len(sequence) - 1
 
-# Binary Search Tester
-Generate a sorted list. Implement:
-- iterative binary search
-- recursive binary search
-Then benchmark them with random inputs.
+    while begin_index <= end_index:
+        midpoint = begin_index + (end_index - begin_index) // 2
+        midpoint_value = sequence[midpoint]
+        if midpoint_value == item:
+            return midpoint
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
+        elif item < midpoint_value:
+            end_index = midpoint - 1
 
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+        else:
+            begin_index = midpoint + 1
 
+    return None
 
-if __name__ == "__main__":
-    main()
+sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+item_a = 3
+
+print(binary_search(sequence, item_a))
