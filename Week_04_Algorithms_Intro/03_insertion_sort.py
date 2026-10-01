@@ -1,23 +1,13 @@
-"""
-TASK: 03 Insertion Sort
 
-# Insertion Sort Tester
-Generate an unsorted list (maybe use RNG). Implement:
-- Insertion sort without using inbuild sorts
-- Count number of comparions
-Then benchmark them with random inputs.
+def insertion_sort(list_a):
+    indexong_length = range(1, len(list_a))
+    for i in indexong_length:
+        value_to_sort = list_a[i]
 
-TODO:
-- Fill in functions
-- Add demonstration code under `if __name__ == "__main__":`
-"""
+        while list_a[i-1] > value_to_sort and i>0:
+            list_a[i], list_a[i-1] = list_a[i-1], list_a[i]
+            i = i-1
 
-def main():
-    # TODO: Write demonstration/testing code
-    # If you want to delete all the code here and work just with a blank file go ahead, remember anything under the if __name__=="__main__":
-    # will only run if this module is being run directly. So used this subprocedure to carry out testing if it is going to be an imported file.
-    pass
+    return list_a
 
-
-if __name__ == "__main__":
-    main()
+print(insertion_sort([1,2,2,1,3,3,5,5,4,7,6,9]))
